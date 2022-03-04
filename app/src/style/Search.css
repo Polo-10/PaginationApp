@@ -1,0 +1,26 @@
+.search {
+  width: 200px;
+  height: 40px;
+  font-size: 18px;
+  transition: 0.5s;
+  border: 0;
+  user-select: none;
+  border: 2px solid black;
+  border-radius: 18px;
+  margin: 40px 40px;
+  box-shadow: 2px 2px 2px 2px lightgray;
+  border: 0;
+  outline: none;
+  outline-style: none;
+}
+
+.search::placeholder {
+  color: black;
+  font-size: 12px;
+  padding-left: 160px;
+}
+
+.search:focus {
+  font-size: 17px;
+  box-shadow: 1px 1px 1px 1px lightgray;
+}

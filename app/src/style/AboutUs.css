@@ -1,0 +1,15 @@
+.aboutus {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.aboutus p {
+  width: 400px;
+  height: 200px;
+  align-items: flex-start;
+  padding: 110px 0;
+  margin: 25px;
+  text-shadow: 1px 1px lightgray;
+}
