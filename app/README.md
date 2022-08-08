@@ -50,19 +50,16 @@ your project root directory)
 7.  Uruchom serwer X(XLAUNCHER). W przypadku powodzenia zobaczysz go na
     swoim panelu ikon.
 
-![](./imageReadMe/media/image1.png){width="2.3229166666666665in"
-height="1.695792869641295in"}
+![](./imageReadMe/media/image1.png)
 
 Jeśli używasz MobaXterm a XLAUNCHER nie odpowiada, sprawdź czy w
 MobaXterm masz wyłączony serwer(włączony może powodować komplikacje
 związane z uruchomieniem XLAUNCHERA który jest niezbędny do uruchomienia
 web inspectora w następnym kroku.
 
-![](./imageReadMe/media/image2.png){width="1.9791666666666667in"
-height="0.96875in"}
+![](./imageReadMe/media/image2.png)
 
-![](./imageReadMe/media/image3.png){width="3.2447911198600177in"
-height="1.225188101487314in"}
+![](./imageReadMe/media/image3.png)
 
 8.  W swoim kliencie ubuntu (koniecznie na swoim koncie)
 
@@ -82,16 +79,14 @@ np.MobaXterm wpisując ifconfig)
 
 setActiveService(\'DH\', {pageExternalId: \'Home_Kids\'})
 
-![](./imageReadMe/media/image4.emf){width="6.3in"
-height="1.7409722222222221in"}
+![](./imageReadMe/media/image4.emf)
 
 \*PODGLĄD ZMIAN W PRZEGLĄDARCE
 
 Po każdej zmianie w projekcie, aby szybko podejrzeć zmiany w
 przeglądarce należy wpisać poniższą komendę (folder z projektem)
 
-![](./imageReadMe/media/image5.png){width="6.145833333333333in"
-height="0.4583333333333333in"}
+![](./imageReadMe/media/image5.png)
 
 \*URUCHOMIANIE PROJEKTU PO DOKONANIU ZMIAN\*
 
