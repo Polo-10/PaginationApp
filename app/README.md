@@ -1,70 +1,127 @@
-# Getting Started with Create React App
+> 1.Configure repositories
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+- npm config set registry
+  https://artifactory.tech.orange/artifactory/api/npm/npmproxy/
 
-## Available Scripts
+- npm config set \@orange-ra-dev:registry
+  https://gitlab.tech.orange/api/v4/projects/179081/packages/npm/
 
-In the project directory, you can run:
+- npm config set \--
+  \'//gitlab.tech.orange/api/v4/projects/179081/packages/npm/:\_authToken\'
+  \"\<your token with API level access\>\"
 
-### `npm start`
+NOTE: Private repository for \@orange-ra-dev is subject to change in
+case we start using more internally updated / developed libraries
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+2.  npm install && npm run build
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+3.  Run web server of your choice to host your build directory as \<your
+    IP\>:8080/
 
-### `npm test`
+For example: docker run \--name nginx -v
+\"\$PWD\"/build:/usr/share/nginx/html:ro \--rm -p 8080:80 -d nginx (from
+your project root directory)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+4.  Define a new service named DH in
+    /flash/Resources/Openweb/\*/\*/InteractiveServicesTable.json (if not
+    already present), ensure the url points to your server
 
-### `npm run build`
+{
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+\"name\": \"DH\",
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+\"url\": \"http://\<your IP\>:8080/index.html\"
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+},
 
-### `npm run eject`
+5.  W STB wpisz następującą komendę aby przejść do wybranego folderu i
+    pobrać.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+**cd /flash/Resources/Openweb/\*/\*/ && rm InteractiveServicesTable.json
+&& wget **
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+**(tą operacje wykonujesz tylko raz na STB)**
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+6.  Sprawdź czy serwer (w moim przypadku nginx) odpowiada wpisując
+    powyższy adres z kroku 4 w swoją przeglądarkę. Gdy strona nie rzuca
+    błędem możesz przejść do następnego kroku, w przeciwnym wypadku
+    należy sprawdzić, czy serwer został wystartowany.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+7.  Uruchom serwer X(XLAUNCHER). W przypadku powodzenia zobaczysz go na
+    swoim panelu ikon.
 
-## Learn More
+![](./imageReadMe/media/image1.png){width="2.3229166666666665in"
+height="1.695792869641295in"}
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Jeśli używasz MobaXterm a XLAUNCHER nie odpowiada, sprawdź czy w
+MobaXterm masz wyłączony serwer(włączony może powodować komplikacje
+związane z uruchomieniem XLAUNCHERA który jest niezbędny do uruchomienia
+web inspectora w następnym kroku.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+![](./imageReadMe/media/image2.png){width="1.9791666666666667in"
+height="0.96875in"}
 
-### Code Splitting
+![](./imageReadMe/media/image3.png){width="3.2447911198600177in"
+height="1.225188101487314in"}
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+8.  W swoim kliencie ubuntu (koniecznie na swoim koncie)
 
-### Analyzing the Bundle Size
+Należy wpisać następujące komendy, aby uruchomić web inspectora
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+\- export DISPLAY=\$(cat /etc/resolv.conf \| grep nameserver \| awk
+\'{print \$2}\'):0
 
-### Making a Progressive Web App
+\- epiphany inspector://\[STB_IP_ADDRESS\]:2999
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+(adres ip STB znajdziesz w swoim narzędziu do zdalnego sterowania
+np.MobaXterm wpisując ifconfig)
 
-### Advanced Configuration
+9.  Po uruchomieniu web inspectora, przejdź do sekcji Inspect a
+    następnie zakładki Console i wpisz poniższą komendę w celu
+    uruchomienia.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+setActiveService(\'DH\', {pageExternalId: \'Home_Kids\'})
 
-### Deployment
+![](./imageReadMe/media/image4.emf){width="6.3in"
+height="1.7409722222222221in"}
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+\*PODGLĄD ZMIAN W PRZEGLĄDARCE
 
-### `npm run build` fails to minify
+Po każdej zmianie w projekcie, aby szybko podejrzeć zmiany w
+przeglądarce należy wpisać poniższą komendę (folder z projektem)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+![](./imageReadMe/media/image5.png){width="6.145833333333333in"
+height="0.4583333333333333in"}
+
+\*URUCHOMIANIE PROJEKTU PO DOKONANIU ZMIAN\*
+
+W przypadku gdy chcesz wprowadzone zmiany prześledzić na telewizorze
+wykonaj **npm run build**, oraz zrestartuj STB komendą **reboot** lub
+przyciskiem z tyłu boxa.
+
+Po tych czynnościach cofnij się do kroku 7-8. W przypadku problemów wróć
+do kroku nr 5.
+
+\*URUCHOMIENIE PROJEKTU PO RESTARCIE KOMPUTERA\*
+
+1\. sudo dockerd
+
+2\. start serwera
+
+3\. Patrz wyżej krok nr 6-9
+
+\*OPCJONALNIE -- Jeśli chcesz wyświetlać zmiany bezpośrednio przez
+telewizor\*
+
+> 1.Add top menu entry, for example by putting public/topMenuConfig.json
+> onto your box into /flash/Resources/topMenuConfig/\*/\*
+
+cd /flash/Resources/topMenuConfig/\*/\* \# this actually works with the
+stars
+
+rm topMenuConfig.json \# or mv topMenuConfig.json topMenuConfig.json.bak
+
+wget http://\<your IP\>:8080/topMenuConfig.json
+
+2.  Reboot your stb, navigate to dh in top menu and press OK to launch
+    the service.
