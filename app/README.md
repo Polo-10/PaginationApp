@@ -79,7 +79,7 @@ np.MobaXterm wpisując ifconfig)
 
 setActiveService(\'DH\', {pageExternalId: \'Home_Kids\'})
 
-![](./imageReadMe/media/image4.emf)
+![](./imageReadMe/media/image4.png)
 
 \*PODGLĄD ZMIAN W PRZEGLĄDARCE
 
