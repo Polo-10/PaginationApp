@@ -8,11 +8,11 @@ answer is probably the link at end of the instructions in section _FAQ
     powershell
 
 2.  Install wsl from
-    [[https://docs.microsoft.com/en-us/windows/wsl/install]{.underline}](https://docs.microsoft.com/en-us/windows/wsl/install)
+    [[https://docs.microsoft.com/en-us/windows/wsl/install]
 
 3.  Install ubuntu version 20.04.4 LTS becasue on 22.04 LTS was problem
     when i tried to create a user. from
-    [[https://www.microsoft.com/en-us/p/ubuntu/9nblggh4msv6]{.underline}](https://www.microsoft.com/en-us/p/ubuntu/9nblggh4msv6)
+    [[https://www.microsoft.com/en-us/p/ubuntu/9nblggh4msv6]
     (05.05.2022)
 
 4.  Run ubuntu from windows terminal (click on down arrow next to \"+\"
@@ -20,14 +20,14 @@ answer is probably the link at end of the instructions in section _FAQ
 
 5.  Install docker from (may be changed for a different ubuntu version
     in the future)
-    [[https://www.digitalocean.com/community/tutorials/how-to-install-and-use-docker-on-ubuntu-20-04]{.underline}](https://www.digitalocean.com/community/tutorials/how-to-install-and-use-docker-on-ubuntu-20-04)
+    [[https://www.digitalocean.com/community/tutorials/how-to-install-and-use-docker-on-ubuntu-20-04]](https://www.digitalocean.com/community/tutorials/how-to-install-and-use-docker-on-ubuntu-20-04)
 
 6.  Paste \"sudo dockerd\" in terminal (after every time unix starts)
 
 7.  Open new ubuntu terminal on windows terminal
 
 8.  Install nvm - \> \"curl -o-
-    [[https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh]{.underline}](https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh)
+    [[https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh]](https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh)
     \| bash\"
 
 9.  Close the terminal tab and open new one according to the message
@@ -44,7 +44,7 @@ answer is probably the link at end of the instructions in section _FAQ
 > root, better do it manually
 
 \"git clone
-[[https://oauth2:\<AUTH_TOKEN\>@gitlab.tech.orange/ra-dev-ols/interactive-s]{.underline}](https://oauth2:%3cAUTH_TOKEN%3e@gitlab.tech.orange/ra-dev-ols/interactive-s)
+[[https://oauth2:\<AUTH_TOKEN\>@gitlab.tech.orange/ra-dev-ols/interactive-s]}](https://oauth2:%3cAUTH_TOKEN%3e@gitlab.tech.orange/ra-dev-ols/interactive-s)
 ervices/dynamic-homepage.git\"
 
 or use gitlab login and password manager for if you use more than one
@@ -71,8 +71,7 @@ connectport=8080
 
 13. Add docker to groups \"usermod -a -G docker \"
 
-> ![](./imageReadMe/media/image1.png){width="6.13000656167979in"
-> height="1.2270155293088365in"}
+> ![](./imageReadMe/media/image1.png)
 
 14. Open new ubuntu terminal tab go to dynamic-homepage directory and
     configure repositories
@@ -130,19 +129,16 @@ your project root directory)
 7.  Start the server X(XLAUNCHER). In case of success you'll see it on
     your icon panel
 
-> ![](./imageReadMe/media/image2.png){width="2.33286198600175in"
-> height="1.7030533683289588in"}
+> ![](./imageReadMe/media/image2.png)
 >
 > If you use MobaXterm a XLAUNCHER doesn't respond, check if in
 > MobaXterm your server is off. (a switched on server may cause
 > complications connected to starting XLAUNCHERA which is necessary for
 > starting web inspector in the next step.
 >
-> ![](./imageReadMe/media/image3.png){width="1.9791666666666667in"
-> height="0.96875in"}
+> ![](./imageReadMe/media/image3.png)
 >
-> ![](./imageReadMe/media/image4.png){width="3.265703193350831in"
-> height="1.2330839895013124in"}
+> ![](./imageReadMe/media/image4.png)
 
 8.  In your client ubuntu (necessarily on your account)
 
