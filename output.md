@@ -27,7 +27,7 @@ answer is probably the link at end of the instructions in section _FAQ
 7.  Open new ubuntu terminal on windows terminal
 
 8.  Install nvm - \> \"curl -o-
-    https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh]{.underline}](https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh)
+    https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh
     \| bash\"
 
 9.  Close the terminal tab and open new one according to the message
