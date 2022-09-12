@@ -75,7 +75,7 @@ connectport=8080
 14. Open new ubuntu terminal tab go to dynamic-homepage directory and
     configure repositories
 
-> **PART 2**
+**PART 2**
 
 1. Configure repositories
 
