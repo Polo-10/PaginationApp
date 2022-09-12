@@ -8,11 +8,11 @@ answer is probably the link at end of the instructions in section _FAQ
     powershell
 
 2.  Install wsl from
-    [[https://docs.microsoft.com/en-us/windows/wsl/install]
+    https://docs.microsoft.com/en-us/windows/wsl/install
 
 3.  Install ubuntu version 20.04.4 LTS becasue on 22.04 LTS was problem
     when i tried to create a user. from
-    [[https://www.microsoft.com/en-us/p/ubuntu/9nblggh4msv6]
+    https://www.microsoft.com/en-us/p/ubuntu/9nblggh4msv6
     (05.05.2022)
 
 4.  Run ubuntu from windows terminal (click on down arrow next to \"+\"
@@ -20,14 +20,14 @@ answer is probably the link at end of the instructions in section _FAQ
 
 5.  Install docker from (may be changed for a different ubuntu version
     in the future)
-    [[https://www.digitalocean.com/community/tutorials/how-to-install-and-use-docker-on-ubuntu-20-04]
+    https://www.digitalocean.com/community/tutorials/how-to-install-and-use-docker-on-ubuntu-20-04
 
 6.  Paste \"sudo dockerd\" in terminal (after every time unix starts)
 
 7.  Open new ubuntu terminal on windows terminal
 
 8.  Install nvm - \> \"curl -o-
-    [[https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh]{.underline}](https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh)
+    https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh]{.underline}](https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh)
     \| bash\"
 
 9.  Close the terminal tab and open new one according to the message
@@ -44,7 +44,7 @@ tip 1. remember to not use any Git Extensions to avoid clone repo as
 root, better do it manually
 
 \"git clone
-[[https://oauth2:\<AUTH_TOKEN\>@gitlab.tech.orange/ra-dev-ols/interactive-s]{.underline}](https://oauth2:%3cAUTH_TOKEN%3e@gitlab.tech.orange/ra-dev-ols/interactive-s)ervices/dynamic-homepage.git\"
+https://oauth2:\<AUTH_TOKEN\>@gitlab.tech.orange/ra-dev-ols/interactive-services/dynamic-homepage.git\"
 
 or use gitlab login and password manager for if you use more than one
 project
@@ -116,7 +116,7 @@ For example: docker run \--name nginx -v
 5.  In STB write the following command in order to go to the chosen
     folder and download cd /flash/Resources/Openweb/\*/\*/ && rm
     InteractiveServicesTable.json && wget
-    [http://\<TwojeIP\>:8080/stb/InteractiveServicesTable.json]
+    http://\<TwojeIP\>:8080/stb/InteractiveServicesTable.json
 
 (this operation you perform only one time on STB.
 
@@ -198,7 +198,7 @@ wget http://\<your IP\>:8080/topMenuConfig.json
 
 **FAQ _&&_ RESOLVE PROBLEMS _&&_ HELPFUL LINKS**
 
-[[https://espace.agir.orange.com/display/RAKNOW/OLS+SOP10+-+WebInsector]
+https://espace.agir.orange.com/display/RAKNOW/OLS+SOP10+-+WebInsector
 
 \*
 
